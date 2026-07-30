@@ -1,0 +1,21 @@
+*&---------------------------------------------------------------------*
+*& Report YRB_NEWSYNTAX_01
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT YRB_NEWSYNTAX_01.
+
+*DATA : LV_INPUT1(2) TYPE N.
+*DATA : LV_INPUT2(2) TYPE N.
+*DATA : LV_OUTPUT(2) TYPE N.
+*
+*LV_INPUT1 = 10.
+*LV_INPUT2 = 20.
+*
+*LV_OUTPUT = LV_INPUT1 + LV_INPUT2.
+*WRITE : 'THE ADDITION OF TWO NUMBER : ' ,LV_OUTPUT.
+
+DATA(LV_INPUT1) = 10.
+DATA(LV_INPUT2) = 20.
+DATA(LV_OUTPUT) = LV_INPUT1 + LV_INPUT2.
+WRITE : 'THE ADDITION OF TWO NUMBER : ' ,LV_OUTPUT.
