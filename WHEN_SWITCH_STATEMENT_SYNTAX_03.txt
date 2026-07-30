@@ -1,0 +1,56 @@
+REPORT yrb_newsyntax_switch_03.
+
+*DATA : lv_month(20) TYPE c.
+
+*PARAMETERS : p_input TYPE i.
+
+*CASE p_input.
+*   WHEN 1.
+*    lv_month = 'January'.
+*   WHEN 2.
+*    lv_month = 'February'.
+*   WHEN 3.
+*    lv_month = 'March'.
+*   WHEN 4.
+*    lv_month = 'April'.
+*   WHEN 5.
+*    lv_month = 'May'.
+*   WHEN 6.
+*    lv_month = 'June'.
+*   WHEN 7.
+*    lv_month = 'July'.
+*   WHEN 8.
+*    lv_month = 'August'.
+*   WHEN 9.
+*    lv_month = 'September'.
+*   WHEN 10.
+*    lv_month = 'Octobor'.
+*   WHEN 11.
+*    lv_month = 'November'.
+*   WHEN 12.
+*    lv_month = 'December'.
+*  WHEN OTHERS.
+*    lv_month = 'inavlid input'.
+*ENDCASE.
+*
+*write :  'the month is : ' , lv_month.
+
+
+
+PARAMETERS : p_input TYPE i.
+
+DATA(LV_MONTH) = SWITCH CHAR20( P_INPUT WHEN 1 THEN 'January'
+                                        WHEN 2 THEN 'February'
+                                        WHEN 3 THEN 'March'
+                                        WHEN 4 THEN 'April'
+                                        WHEN 5 THEN 'May'
+                                        WHEN 6 THEN 'June'
+                                        WHEN 7 THEN 'July'
+                                        WHEN 8 THEN 'August'
+                                        WHEN 9 THEN 'September'
+                                        WHEN 10 THEN 'Octobor'
+                                        WHEN 11 THEN 'November'
+                                        WHEN 12 THEN 'December'
+                                        ELSE 'INVALID INPUT' ).
+
+WRITE : LV_MONTH.
